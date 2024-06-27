@@ -1,7 +1,62 @@
-For your assessment, we will create a contract together to fulfill the following requirements:
+****Project Title****
+MyToken Smart Contract
 
-Your contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
-Your contract will have a mapping of addresses to balances (address => uint)
-You will have a mint function that takes two parameters: an address and a value. The function then increases the total supply by that number and increases the balance of the address by that amount.
-Your contract will have a burn function, which works the opposite of the mint function, as it will destroy tokens. It will take an address and value just like the mint functions. It will then deduct the value from the total supply and from the balance of the address.
-Lastly, your burn function should have conditionals to make sure the balance of account is greater than or equal to the amount that is supposed to be burned.
+**Description**
+MyToken is a smart contract implemented on the Ethereum blockchain using Solidity. This contract allows the creation and management of a custom token with features to mint and burn tokens. It includes public variables to store details about the token, such as its name, abbreviation, and total supply, as well as a mapping of addresses to their respective balances.
+
+**Getting Started**
+Installing
+To get started with the MyToken smart contract, follow these steps:
+
+Download the Project:
+
+Clone the repository or download the contract code directly.
+Set Up Development Environment:
+
+Ensure you have Node.js and npm installed.
+Install Truffle and Ganache for local Ethereum development.
+Install Dependencies:
+
+Run npm install to install necessary dependencies.
+
+**Executing Program**
+To compile, deploy, and interact with the MyToken smart contract, follow these steps:
+
+Compile the Contract:
+
+truffle compile
+
+Deploy the Contract:
+
+truffle migrate
+
+Interact with the Contract:
+
+Open the Truffle console:
+
+truffle console
+
+Mint tokens:
+let instance = await MyToken.deployed();
+instance.mint('0xYourEthereumAddress', 100);
+
+Burn tokens:
+instance.burn('0xYourEthereumAddress', 50);
+
+**Help**
+For common problems or issues:
+
+Ensure the Ethereum address used in minting and burning is valid and has sufficient balance for burning.
+Make sure Ganache is running if deploying locally.
+
+For additional help:
+
+truffle help
+
+**Authors**
+Jill Wassabi
+
+@JillWassabi
+
+**License**
+This project is licensed under the MIT License 
